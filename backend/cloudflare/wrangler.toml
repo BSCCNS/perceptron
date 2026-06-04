@@ -1,0 +1,10 @@
+name = "perceptron-logger"
+main = "src/worker.js"
+compatibility_date = "2025-06-01"
+
+# Created with: npx wrangler d1 create perceptron
+# Paste the printed database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "perceptron"
+database_id = "1c7d35bc-9868-47a2-8b59-796ac2b5dd78"

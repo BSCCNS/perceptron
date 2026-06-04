@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>perceptron</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>perceptron</h1>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="cap">best</span><span id="s-best" class="num">0.00%</span></div>
+      <div class="stat"><span class="cap">avg</span><span id="s-avg" class="num">0.00%</span></div>
+      <div class="stat"><span class="cap">streak</span><span id="s-streak" class="num">0</span></div>
+      <div class="stat"><span class="cap">rounds</span><span id="s-rounds" class="num">0</span></div>
+    </div>
+  </header>
+
+  <nav id="tabs" class="tabs" aria-label="Encoding"></nav>
+
+  <main>
+    <p id="meta" class="meta"></p>
+    <div id="headline" class="headline"></div>
+    <p id="range" class="range"></p>
+    <p id="instruction" class="instruction"></p>
+    <svg id="stage" viewBox="0 0 900 520" preserveAspectRatio="xMidYMid meet" role="img"></svg>
+    <div class="controls">
+      <button id="lockin" class="lockin" hidden>Lock in</button>
+      <button id="next" hidden>Next</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+  </main>
+
+  <section class="breakdown">
+    <h2>Your accuracy by encoding</h2>
+    <div id="breakdown-rows"></div>
+  </section>
+
+  <footer>
+    <button id="about-btn" class="linkbtn">About</button>
+    <button id="reset" class="linkbtn">Reset stats</button>
+    <span id="privacy" class="privacy" hidden>Anonymous results are recorded to study chart reading.</span>
+  </footer>
+
+  <dialog id="about">
+    <div class="about-body">
+      <h2>perceptron</h2>
+      <p>Each round shows one value drawn as a single visual characteristic, called an encoding. 
+         Read it,
+         then place your guess in one click (or, on a phone, drag and lock in).
+         Your accuracy is scored and tracked per encoding.</p>
+      <p>The encodings are ordered by the <b>Cleveland–McGill graphical-perception
+         hierarchy</b> — a classic finding that people read some encodings far more
+         accurately than others. Position along a common scale is read best; area
+         and colour are read worst. Playing is a hands-on demo of that ranking.</p>
+      <div id="about-encodings" class="about-encodings"></div>
+      <p id="about-privacy" class="about-note" hidden>
+        Anonymous results from your rounds (the encoding, your guess, the target,
+        and a random session id) are recorded to study how people read charts. No
+        personal data is collected.
+      </p>
+      <p class="about-note">Inspired by
+         <a href="https://eyeball.rory.codes/" target="_blank" rel="noopener">eyeball</a>.</p>
+    </div>
+    <form method="dialog"><button class="lockin">Close</button></form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="src/util.js"></script>
+  <script src="src/logger.js"></script>
+  <script src="src/challenges.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>

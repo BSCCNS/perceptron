@@ -1,0 +1,13 @@
+{
+  "name": "perceptron-logger",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "schema": "wrangler d1 execute perceptron --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}
